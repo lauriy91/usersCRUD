@@ -3,7 +3,7 @@ import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 // Modelo encargado de crear las clases y base de datos de los usuarios
 @Entity()
-export class Usuario {
+export class UserEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
