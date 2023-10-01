@@ -11,6 +11,7 @@ export class RolesService {
     constructor(
         @InjectRepository(RolEntity)
         private rolRepository : Repository<RolEntity>,
+        @InjectRepository(UserEntity)
         private userRepository : Repository<UserEntity>,
     ){}
 

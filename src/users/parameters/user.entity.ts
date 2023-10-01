@@ -1,8 +1,9 @@
 /* eslint-disable prettier/prettier */
+import { Optional } from "@nestjs/common";
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
 
 // Modelo encargado de crear las clases y base de datos de los usuarios
-@Entity()
+@Entity('user_entity')
 export class UserEntity {
     @PrimaryGeneratedColumn()
     id: number;
@@ -17,6 +18,7 @@ export class UserEntity {
     password: string;
 
     @Column()
+    @Optional()
     phone?: number;
 
     @Column()

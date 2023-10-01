@@ -33,7 +33,7 @@ import { RolesModule } from './roles/roles.module';
       password: process.env.DB_PASS,
       database: process.env.DB_NAME,
       autoLoadEntities: true,
-      synchronize: !!process.env.DB_SYNC
+      synchronize: true
     }),
     UsersModule,
     RolesModule

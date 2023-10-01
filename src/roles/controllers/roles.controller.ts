@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { RolesService } from '../services/roles.service';
 import { Body, Controller, Post, Put, Get, NotFoundException, Param, Delete, Query } from '@nestjs/common';
+// import { Body, Controller, Put, Get, NotFoundException, Param, Delete } from '@nestjs/common';
 import { RolEntity } from '../parameters/rol.entity';
 import { RolDto, UpdateRolDto } from '../parameters/rol.dto';
 

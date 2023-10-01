@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { ApiProperty } from '@nestjs/swagger';
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 
 export class UserDTO {
   @ApiProperty()
@@ -12,6 +12,7 @@ export class UserDTO {
   readonly password: string;
 
   @ApiProperty()
+  @ApiPropertyOptional()
   readonly phone?: number;
 
   @ApiProperty()
