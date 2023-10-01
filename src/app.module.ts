@@ -20,6 +20,7 @@ import { ConfigModule } from '@nestjs/config';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
+import { RolesModule } from './roles/roles.module';
 
 @Module({
   imports: [
@@ -34,7 +35,8 @@ import { UsersModule } from './users/users.module';
       autoLoadEntities: true,
       synchronize: !!process.env.DB_SYNC
     }),
-    UsersModule
+    UsersModule,
+    RolesModule
   ],
   controllers: [],
   providers: [],
