@@ -2,7 +2,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { UserEntity } from './user.entity';
+import { UserEntity } from '../parameters/user.entity';
 
 // Encargado de la lógica del negocio a traves de la creación de metodos que serán inyectados en los controladores.
 @Injectable()
@@ -17,4 +17,9 @@ export class UsersService {
         const newUser = this.userRepository.create(user);
         return this.userRepository.save(newUser);
     }
+
+    // metodo encargado de traer todos los usuarios existentes
+    async getAll(): Promise<UserEntity[]> {
+        return this.userRepository.find();
+      }
 }
