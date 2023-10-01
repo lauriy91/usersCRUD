@@ -1,7 +1,6 @@
-import { Get } from '@nestjs/common';
 /* eslint-disable prettier/prettier */
 import { UsersService } from '../services/users.service';
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, Put, Get, NotFoundException, Param } from '@nestjs/common';
 import { UserEntity } from '../parameters/user.entity';
 import { UserDTO } from '../parameters/user.dto';
 
@@ -70,5 +69,34 @@ export class UsersController {
       return this.usersService.getAll();
     }
 
+    // Traer usuarios por id
+    @ApiOperation({
+        summary: "Traer usuarios por id",
+        description: "Traer usuarios por id"
+      })
+      @ApiOkResponse({
+        type: BaseUsuarioResponse
+      })
+    @Get(':id')
+    async getOne(@Param('id') id: number): Promise<UserEntity> {
+      const user = await this.usersService.getOne(id);
+      if (!user) {
+        throw new NotFoundException('User does not exist!');
+      } else {
+        return user;
+      }
+    }
 
+    //Actualizar usuarios por id
+    @ApiOperation({
+      summary: "Actualizar usuarios por id",
+      description: "Actualizar usuarios por id"
+    })
+    @ApiOkResponse({
+      type: BaseUsuarioResponse
+    })
+    @Put(':id')
+    async update (@Param('id') id: number, @Body() data: UserDTO): Promise<any> {
+      return this.usersService.update(id, data);
+    }
 }

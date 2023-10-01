@@ -21,5 +21,16 @@ export class UsersService {
     // metodo encargado de traer todos los usuarios existentes
     async getAll(): Promise<UserEntity[]> {
         return this.userRepository.find();
-      }
+    }
+
+    // metodo encargado de traer todos los usuarios existentes
+    async getOne(id: number): Promise<UserEntity> {
+        return this.userRepository.findOne({ where: { id } });
+    }
+    
+    // metodo encargado de actualizar usuarios
+    async update(id: number, user: Partial<UserEntity>): Promise<UserEntity> {
+        await this.userRepository.update(id, user);
+        return this.userRepository.findOne({ where: { id } });
+    }
 }
