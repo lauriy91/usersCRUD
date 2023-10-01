@@ -2,6 +2,7 @@ import { UsersService } from './users.service';
 /* eslint-disable prettier/prettier */
 import { Body, Controller, Post } from '@nestjs/common';
 import { UserEntity } from './user.entity';
+// import { UserDTO } from './user.dto';
 
 @Controller('users')
 export class UsersController {
