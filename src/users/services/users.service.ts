@@ -42,7 +42,8 @@ export class UsersService {
     }
 
     // metodo encargado de eliminar usuarios
-    async delete(id: number): Promise<void> {
+    async delete(id: number): Promise<any> {
         await this.userRepository.delete(id);
+        return { msg: "Usuario eliminado" }
     }
 }

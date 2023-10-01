@@ -1,0 +1,29 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "traer-roles",
+    "dateExported": "2023-10-01T18:39:37.567Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "39675b9e-8a6f-47e4-9540-248b62db0e35",
+            "colId": "62e2d71c-7f79-4594-9d33-36bbe8730070",
+            "containerId": "",
+            "name": "http://localhost:3000/users?full_name=laura Rodriguez&email=laura1@gmail.com&password=password123&phone=3214260170&role=basico&id_deleted=true",
+            "url": "http://localhost:3000/roles/role?role=basico",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-01T18:32:58.958Z",
+            "modified": "2023-10-01T18:32:58.958Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "role",
+                    "value": "basico",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

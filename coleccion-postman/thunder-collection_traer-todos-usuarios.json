@@ -1,0 +1,23 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "traer-todos-usuarios",
+    "dateExported": "2023-10-01T18:39:13.026Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0040ce54-1d9b-41d7-97bc-094fd834f1cf",
+            "colId": "9a5b686a-15be-49f6-921b-ff7788d22d61",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-01T18:18:58.972Z",
+            "modified": "2023-10-01T18:18:58.972Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

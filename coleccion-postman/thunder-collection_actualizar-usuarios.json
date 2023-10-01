@@ -1,0 +1,66 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "actualizar-usuarios",
+    "dateExported": "2023-10-01T18:39:18.355Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "4451c4a0-d6c8-4108-8727-c810e4705df2",
+            "colId": "33ce06e1-b99d-4be6-972b-405d548d8422",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users/10",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2023-10-01T18:20:02.885Z",
+            "modified": "2023-10-01T18:20:02.885Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"full_name\": \"Test2\",\n  \"email\": \"test2@gmail.com\",\n  \"password\": \"newpassword2\",\n  \"phone\": 222,\n  \"role\": \"admin\",\n  \"is_deleted\": false\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0ae5b55c-4780-4943-8e14-fc4c44f5e532",
+            "colId": "33ce06e1-b99d-4be6-972b-405d548d8422",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users/8",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2023-10-01T18:20:33.509Z",
+            "modified": "2023-10-01T18:20:33.509Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"full_name\": \"Test8\",\n  \"email\": \"test2@gmail.com\",\n  \"password\": \"newpassword8\",\n  \"phone\": 222,\n  \"role\": \"admin\",\n  \"is_deleted\": false\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b3b2ab2f-c671-4cf5-aeea-7d9a717b3efc",
+            "colId": "33ce06e1-b99d-4be6-972b-405d548d8422",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users/5",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-10-01T18:20:58.955Z",
+            "modified": "2023-10-01T18:20:58.955Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"full_name\": \"Test8\",\n  \"email\": \"test2@gmail.com\",\n  \"password\": \"newpassword5\",\n  \"phone\": 222,\n  \"role\": \"admin\",\n  \"is_deleted\": false\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

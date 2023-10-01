@@ -1,0 +1,66 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "crear-rol",
+    "dateExported": "2023-10-01T18:39:31.413Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0f9eb75c-df0e-47b4-b90a-8822dbbb13d8",
+            "colId": "c90ddcef-f18d-4139-93ce-c6a70d673ae4",
+            "containerId": "",
+            "name": "http://localhost:3000/users?full_name=laura Rodriguez&email=laura1@gmail.com&password=password123&phone=3214260170&role=basico&id_deleted=true",
+            "url": "http://localhost:3000/roles",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-10-01T18:30:42.369Z",
+            "modified": "2023-10-01T18:30:42.369Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"name\": \"superadmin\",\r\n  \"is_deleted\": true\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6151a606-84e2-4781-b3a9-eb5ff27abb5f",
+            "colId": "c90ddcef-f18d-4139-93ce-c6a70d673ae4",
+            "containerId": "",
+            "name": "http://localhost:3000/users?full_name=laura Rodriguez&email=laura1@gmail.com&password=password123&phone=3214260170&role=basico&id_deleted=true",
+            "url": "http://localhost:3000/roles",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-10-01T18:30:57.811Z",
+            "modified": "2023-10-01T18:30:57.811Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"name\": \"admin\",\r\n  \"is_deleted\": true\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9dd25e90-bb2a-4783-85dd-408236f7d53d",
+            "colId": "c90ddcef-f18d-4139-93ce-c6a70d673ae4",
+            "containerId": "",
+            "name": "http://localhost:3000/users?full_name=laura Rodriguez&email=laura1@gmail.com&password=password123&phone=3214260170&role=basico&id_deleted=true",
+            "url": "http://localhost:3000/roles",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-01T18:31:09.563Z",
+            "modified": "2023-10-01T18:31:09.563Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"name\": \"basico\",\r\n  \"is_deleted\": true\r\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

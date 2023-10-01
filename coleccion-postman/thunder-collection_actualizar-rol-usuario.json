@@ -1,0 +1,66 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "actualizar-rol-usuario",
+    "dateExported": "2023-10-01T18:39:23.000Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0f6a514d-8848-4ca0-93ca-2e3eab3a21b9",
+            "colId": "7ef80528-1eb0-4b65-9191-87927b62a9b9",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users/5",
+            "method": "PATCH",
+            "sortNum": 10000,
+            "created": "2023-10-01T18:22:19.097Z",
+            "modified": "2023-10-01T18:22:19.097Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"role\": \"basico\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a51a69d0-ccbc-441d-8884-25980bb39743",
+            "colId": "7ef80528-1eb0-4b65-9191-87927b62a9b9",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users/10",
+            "method": "PATCH",
+            "sortNum": 20000,
+            "created": "2023-10-01T18:22:35.886Z",
+            "modified": "2023-10-01T18:22:35.886Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"role\": \"basico\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5da6980e-5447-47b4-bc3a-854a3fe45a77",
+            "colId": "7ef80528-1eb0-4b65-9191-87927b62a9b9",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users/8",
+            "method": "PATCH",
+            "sortNum": 30000,
+            "created": "2023-10-01T18:23:06.758Z",
+            "modified": "2023-10-01T18:23:06.758Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"role\": \"admin\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

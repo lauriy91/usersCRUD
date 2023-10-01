@@ -1,6 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { UsersService } from '../services/users.service';
-import { Body, Controller, Post, Put, Get, NotFoundException, Param, Delete, Patch, UseGuards } from '@nestjs/common';
+import { Body, Controller, Post, Put, Get, NotFoundException, Param, Delete, Patch, 
+  UseGuards 
+  } from '@nestjs/common';
 import { UserEntity } from '../parameters/user.entity';
 import { UserDTO, UserRolDTO } from '../parameters/user.dto';
 

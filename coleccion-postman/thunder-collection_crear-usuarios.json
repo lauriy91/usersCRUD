@@ -1,0 +1,66 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "crear-usuarios",
+    "dateExported": "2023-10-01T18:38:33.724Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ecffe794-8cdb-4ba5-94dd-da23469fa570",
+            "colId": "db7fb9a4-9045-424e-9304-b1513ed741b6",
+            "containerId": "",
+            "name": "http://localhost:3000/users?full_name=laura Rodriguez&email=laura1@gmail.com&password=password123&phone=3214260170&role=basico&id_deleted=true",
+            "url": "http://localhost:3000/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-10-01T18:11:03.117Z",
+            "modified": "2023-10-01T18:11:03.117Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"full_name\": \"Test1\",\r\n  \"email\": \"test1@gmail.com\",\r\n  \"password\": \"password1\",\r\n  \"phone\": 311,\r\n  \"role\": \"basico\",\r\n  \"is_deleted\": true\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "74ecb0e8-ecd6-4d71-8c46-e3e7eef68a4e",
+            "colId": "db7fb9a4-9045-424e-9304-b1513ed741b6",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-10-01T18:15:41.309Z",
+            "modified": "2023-10-01T18:15:41.309Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"full_name\": \"Test2\",\n  \"email\": \"test2@gmail.com\",\n  \"password\": \"password2\",\n  \"phone\": 222,\n  \"role\": \"admin\",\n  \"is_deleted\": false\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7a03d5f6-e2c8-42ab-933f-34de84dfdefc",
+            "colId": "db7fb9a4-9045-424e-9304-b1513ed741b6",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-01T18:16:02.746Z",
+            "modified": "2023-10-01T18:16:02.746Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"full_name\": \"Test3\",\n  \"email\": \"test3@gmail.com\",\n  \"password\": \"password3\",\n  \"phone\": 333,\n  \"role\": \"basico\",\n  \"is_deleted\": false\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

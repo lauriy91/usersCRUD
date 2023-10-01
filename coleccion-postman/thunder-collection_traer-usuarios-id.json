@@ -1,0 +1,51 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "traer-usuarios-id",
+    "dateExported": "2023-10-01T18:39:07.458Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "fcc64553-62ee-4555-8f16-85655129e5a1",
+            "colId": "b2131323-6ee0-4aef-afc7-8cf8fd874028",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users/8",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-01T18:18:03.963Z",
+            "modified": "2023-10-01T18:18:03.963Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "640dcbfa-c141-4d20-8e2a-657ed119ab3d",
+            "colId": "b2131323-6ee0-4aef-afc7-8cf8fd874028",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users/10",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-01T18:18:16.420Z",
+            "modified": "2023-10-01T18:18:16.420Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9dd6754f-c3cd-4851-bd87-4d5f72cd864d",
+            "colId": "b2131323-6ee0-4aef-afc7-8cf8fd874028",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users/5",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-10-01T18:18:28.844Z",
+            "modified": "2023-10-01T18:18:28.844Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

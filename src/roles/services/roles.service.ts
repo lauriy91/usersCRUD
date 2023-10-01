@@ -48,7 +48,8 @@ export class RolesService {
     }
 
     // metodo encargado de eliminar roles
-    async delete(id: number): Promise<void> {
+    async delete(id: number): Promise<any> {
         await this.rolRepository.delete(id);
+        return { msg: "Rol eliminado" };
     }
 }

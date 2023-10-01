@@ -1,0 +1,37 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "eliminar-usuarios",
+    "dateExported": "2023-10-01T18:39:27.705Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a907ca1c-bd36-49cd-8f1a-737828aa6ca7",
+            "colId": "f6b7a6d8-ffc7-4a8a-ab21-1ac2a1e9f873",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users/8",
+            "method": "DELETE",
+            "sortNum": 10000,
+            "created": "2023-10-01T18:24:23.218Z",
+            "modified": "2023-10-01T18:24:23.218Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "dfe37ae8-6657-4cc5-8628-8922ebdedf4e",
+            "colId": "f6b7a6d8-ffc7-4a8a-ab21-1ac2a1e9f873",
+            "containerId": "",
+            "name": "http://localhost:3000/users",
+            "url": "http://localhost:3000/users/12",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2023-10-01T18:29:06.773Z",
+            "modified": "2023-10-01T18:29:06.773Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

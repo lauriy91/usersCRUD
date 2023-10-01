@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "actualizar-roles",
+    "dateExported": "2023-10-01T18:39:46.760Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3a107a93-0c3b-4584-a970-8f4c728a4e43",
+            "colId": "a1200360-080d-497f-bb8a-9e598c57e697",
+            "containerId": "",
+            "name": "http://localhost:3000/users?full_name=laura Rodriguez&email=laura1@gmail.com&password=password123&phone=3214260170&role=basico&id_deleted=true",
+            "url": "http://localhost:3000/roles/13",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2023-10-01T18:33:45.470Z",
+            "modified": "2023-10-01T18:33:45.470Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"name\": \"admin\",\r\n  \"is_deleted\": true\r\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
