@@ -52,3 +52,21 @@ export class UserRolDTO {
     this.role = role;
   }
 }
+
+export class LoginUserDTO {
+
+  @ApiProperty()
+  @IsEmail()
+  readonly email: string;
+
+  @ApiProperty()
+  @IsString()
+  @MinLength(6)
+  @Transform(({ value }) => value.trim())
+  readonly password: string;
+
+  constructor(email: string, password: string) {
+    this.email = email;
+    this.password = password;
+  }
+}

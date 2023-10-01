@@ -29,3 +29,17 @@ export class BaseUsuarioResponse {
   @ApiProperty()
   updated_at: Date;
 }
+
+export class LoginResponse {
+  @ApiProperty()
+  access_token: string;
+
+  @ApiProperty()
+  expires_in: any;
+
+  @ApiProperty()
+  message: string;
+
+  @ApiProperty()
+  status: boolean;
+}
