@@ -4,6 +4,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { UserEntity } from '../parameters/user.entity';
 import { UserRolDTO } from '../parameters/user.dto';
+import { hash } from 'bcrypt';
 
 // Encargado de la lógica del negocio a traves de la creación de metodos que serán inyectados en los controladores.
 @Injectable()
@@ -16,6 +17,12 @@ export class UsersService {
     // metodo encargado de la creación de usuarios
     async create(user: Partial<UserEntity>): Promise<UserEntity> {
         const newUser = this.userRepository.create(user);
+
+        // Encript password
+        const { password } = user;
+        const plainToHash = await hash(password, 8);
+        user = { ...user, password: plainToHash };
+
         return this.userRepository.save(newUser);
     }
 
