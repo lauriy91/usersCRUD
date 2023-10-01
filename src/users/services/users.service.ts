@@ -3,6 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { UserEntity } from '../parameters/user.entity';
+import { UserRolDTO } from '../parameters/user.dto';
 
 // Encargado de la lógica del negocio a traves de la creación de metodos que serán inyectados en los controladores.
 @Injectable()
@@ -30,6 +31,12 @@ export class UsersService {
     
     // metodo encargado de actualizar usuarios
     async update(id: number, user: Partial<UserEntity>): Promise<UserEntity> {
+        await this.userRepository.update(id, user);
+        return this.userRepository.findOne({ where: { id } });
+    }
+
+    // metodo encargado de actualizar el rol de los usuarios
+    async updateRole(id: number, user: Partial<UserRolDTO>): Promise<UserEntity> {
         await this.userRepository.update(id, user);
         return this.userRepository.findOne({ where: { id } });
     }

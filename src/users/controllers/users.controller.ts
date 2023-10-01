@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { UsersService } from '../services/users.service';
-import { Body, Controller, Post, Put, Get, NotFoundException, Param, Delete } from '@nestjs/common';
+import { Body, Controller, Post, Put, Get, NotFoundException, Param, Delete, Patch } from '@nestjs/common';
 import { UserEntity } from '../parameters/user.entity';
-import { UserDTO } from '../parameters/user.dto';
+import { UserDTO, UserRolDTO } from '../parameters/user.dto';
 
 import {
     ApiBadRequestResponse,
@@ -97,7 +97,20 @@ export class UsersController {
       type: BaseUsuarioResponse
     })
     @Put(':id')
-    async update (@Param('id') id: number, @Body() data: UserDTO): Promise<any> {
+    async update(@Param('id') id: number, @Body() data: UserDTO): Promise<any> {
+      return this.usersService.update(id, data);
+    }
+
+    // Actualizar el rol de los usuarios por id
+    @ApiOperation({
+      summary: "Actualizar el rol de los usuarios por id",
+      description: "Actualizar el rol de los usuarios por id"
+    })
+    @ApiOkResponse({
+      type: BaseUsuarioResponse
+    })
+    @Patch(':id')
+    async updateUserRol(@Param('id') id: number, @Body() data: UserRolDTO): Promise<any> {
       return this.usersService.update(id, data);
     }
 

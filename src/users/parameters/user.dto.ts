@@ -30,3 +30,13 @@ export class UserDTO {
     this.is_deleted = is_deleted;
   }
 }
+
+export class UserRolDTO {
+
+  @ApiProperty()
+  readonly role: string;
+
+  constructor(role: string) {
+    this.role = role;
+  }
+}
