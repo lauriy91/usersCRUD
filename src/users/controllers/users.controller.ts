@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { UsersService } from '../services/users.service';
-import { Body, Controller, Post, Put, Get, NotFoundException, Param, Delete, Patch } from '@nestjs/common';
+import { Body, Controller, Post, Put, Get, NotFoundException, Param, Delete, Patch, UseGuards } from '@nestjs/common';
 import { UserEntity } from '../parameters/user.entity';
 import { UserDTO, UserRolDTO } from '../parameters/user.dto';
 
@@ -11,10 +11,12 @@ import {
     ApiOkResponse,
     ApiOperation,
     ApiTags,
-    ApiUnauthorizedResponse
+    ApiUnauthorizedResponse,
+    ApiBearerAuth
   } from "@nestjs/swagger";
 import { BaseUsuarioResponse } from '../parameters/user.response';
 import { ErrorBaseResponse } from 'src/common/exception/error.response';
+import { AuthGuard } from 'src/common/security/auth.guard';
   
   // Rutas y versiones del proyecto
   @ApiTags("users")
@@ -114,6 +116,9 @@ export class UsersController {
       return this.usersService.update(id, data);
     }
 
+    // Authentication area
+    @ApiBearerAuth()
+    @UseGuards(AuthGuard)
     //Eliminar usuarios por id
     @ApiOperation({
       summary: "Eliminar usuarios por id",
