@@ -3,6 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { RolEntity } from '../parameters/rol.entity';
+import { UserEntity } from 'src/users/parameters/user.entity';
 
 // Encargado de la lógica del negocio a traves de la creación de metodos que serán inyectados en los controladores.
 @Injectable()
@@ -10,6 +11,7 @@ export class RolesService {
     constructor(
         @InjectRepository(RolEntity)
         private rolRepository : Repository<RolEntity>,
+        private userRepository : Repository<UserEntity>,
     ){}
 
     // metodo encargado de la creación de roles
@@ -21,6 +23,11 @@ export class RolesService {
     // metodo encargado de traer todos los roles existentes
     async getAll(): Promise<RolEntity[]> {
         return this.rolRepository.find();
+    }
+
+    // metodo encargado de traer todos los usuarios por rol
+    async getUsersRol([role]): Promise<UserEntity[]> {
+        return this.userRepository.find(role);
     }
 
     // metodo encargado de traer todos los roles por id

@@ -6,14 +6,19 @@ export class BaseRolResponse {
   id: number;
 
   @ApiProperty()
+  rol: string;
+
+  @ApiProperty()
+  readonly created_at: Date;
+
+  @ApiProperty()
+  readonly updated: Date;
+}
+
+export class UpdateRolResponse extends BaseRolResponse {
+  @ApiProperty()
   name: string;
 
   @ApiProperty()
   readonly is_deleted: boolean;
-
-  @ApiProperty()
-  readonly created_at: string;
-
-  @ApiProperty()
-  readonly updated: string;
 }

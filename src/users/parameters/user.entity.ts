@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
 
 // Modelo encargado de crear las clases y base de datos de los usuarios
 @Entity()
@@ -11,25 +11,25 @@ export class UserEntity {
     full_name: string;
 
     @Column()
-    email:string;
+    email: string;
 
     @Column()
-    password:string;
+    password: string;
 
-    // @Column()
-    // phone:string;
+    @Column()
+    phone?: number;
 
-    // @Column()
-    // role:string;
+    @Column()
+    role: string;
 
-    // @Column()
-    // is_deleted:string;
+    @Column()
+    is_deleted: boolean;
 
-    // @Column()
-    // created_at:string;
+    @CreateDateColumn({ type: 'timestamptz' })
+    created_at: Date;
 
-    // @Column()
-    // updated_at:string;
+    @UpdateDateColumn({ type: 'timestamptz' })
+    updated_at: Date;
 }
 
 

@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { RolesService } from '../services/roles.service';
-import { Body, Controller, Post, Put, Get, NotFoundException, Param, Delete } from '@nestjs/common';
+import { Body, Controller, Post, Put, Get, NotFoundException, Param, Delete, Query } from '@nestjs/common';
 import { RolEntity } from '../parameters/rol.entity';
-import { RolDto } from '../parameters/rol.dto';
+import { RolDto, UpdateRolDto } from '../parameters/rol.dto';
 
 import {
     ApiBadRequestResponse,
@@ -15,6 +15,7 @@ import {
   } from "@nestjs/swagger";
 import { BaseRolResponse } from '../parameters/rol.response';
 import { ErrorBaseResponse } from 'src/common/exception/error.response';
+import { UserEntity } from 'src/users/parameters/user.entity';
   
   // Rutas y versiones del proyecto
   @ApiTags("roles")
@@ -53,7 +54,7 @@ export class RolesController {
         type: BaseRolResponse
       })
     @Post()
-    async create(@Body() data: RolDto): Promise<RolEntity>{
+    async create(@Body() data: RolDto ): Promise<RolEntity>{
         return this.rolesService.create(data);
     }
 
@@ -70,23 +71,18 @@ export class RolesController {
       return this.rolesService.getAll();
     }
 
-    // Traer roles por id
+    // Traer usuarios por rol REVISAR
     @ApiOperation({
-        summary: "Traer roles por id",
-        description: "Traer roles por id"
+        summary: "Traer usuarios por rol",
+        description: "Traer usuarios por rol"
       })
       @ApiOkResponse({
         type: BaseRolResponse
       })
-    @Get(':id')
-    async getOne(@Param('id') id: number): Promise<RolEntity> {
-      const rol = await this.rolesService.getOne(id);
-      if (!rol) {
-        throw new NotFoundException('Rols does not exist!');
-      } else {
-        return rol;
+    @Get()
+    async getUsersRol(@Query('role') role: string): Promise<UserEntity[]> {
+        return this.rolesService.getUsersRol([role]);
       }
-    }
 
     //Actualizar roles por id
     @ApiOperation({
@@ -97,7 +93,7 @@ export class RolesController {
       type: BaseRolResponse
     })
     @Put(':id')
-    async update (@Param('id') id: number, @Body() data: RolDto): Promise<any> {
+    async update(@Param('id') id: number, @Body() data: UpdateRolDto): Promise<any> {
       return this.rolesService.update(id, data);
     }
 

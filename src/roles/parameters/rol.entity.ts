@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
 
 // Modelo encargado de crear las clases y base de datos de los roles
 @Entity()
@@ -11,13 +11,16 @@ export class RolEntity {
     name: string;
 
     @Column()
-    is_deleted:boolean;
+    rol: string;
 
     @Column()
-    created_at:string;
+    is_deleted?: boolean;
 
-    @Column()
-    updated_at:string;
+    @CreateDateColumn({ type: 'timestamptz' })
+    created_at: Date;
+
+    @UpdateDateColumn({ type: 'timestamptz' })
+    updated_at: Date;
 }
 
 
