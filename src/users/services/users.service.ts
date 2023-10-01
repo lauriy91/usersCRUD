@@ -23,7 +23,7 @@ export class UsersService {
         return this.userRepository.find();
     }
 
-    // metodo encargado de traer todos los usuarios existentes
+    // metodo encargado de traer todos los usuarios por id
     async getOne(id: number): Promise<UserEntity> {
         return this.userRepository.findOne({ where: { id } });
     }

@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { UsersService } from '../services/users.service';
+import { RolesService } from '../services/roles.service';
 import { Body, Controller, Post, Put, Get, NotFoundException, Param, Delete } from '@nestjs/common';
 import { RolEntity } from '../parameters/rol.entity';
 import { RolDto } from '../parameters/rol.dto';

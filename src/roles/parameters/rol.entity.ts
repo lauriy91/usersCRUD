@@ -11,7 +11,7 @@ export class RolEntity {
     name: string;
 
     @Column()
-    is_deleted:string;
+    is_deleted:boolean;
 
     @Column()
     created_at:string;
