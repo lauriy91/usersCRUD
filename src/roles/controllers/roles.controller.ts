@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { UsersService } from '../services/users.service';
 import { Body, Controller, Post, Put, Get, NotFoundException, Param, Delete } from '@nestjs/common';
-import { RolEntity } from '../parameters/user.entity';
-import { RolDto } from '../parameters/user.dto';
+import { RolEntity } from '../parameters/rol.entity';
+import { RolDto } from '../parameters/rol.dto';
 
 import {
     ApiBadRequestResponse,
@@ -13,7 +13,7 @@ import {
     ApiTags,
     ApiUnauthorizedResponse
   } from "@nestjs/swagger";
-import { BaseRolesResponse } from '../parameters/user.response';
+import { BaseRolResponse } from '../parameters/rol.response';
 import { ErrorBaseResponse } from 'src/common/exception/error.response';
   
   // Rutas y versiones del proyecto
@@ -50,7 +50,7 @@ export class RolesController {
         description: "Crear roles"
       })
       @ApiOkResponse({
-        type: BaseRolesResponse
+        type: BaseRolResponse
       })
     @Post()
     async create(@Body() data: RolDto): Promise<RolEntity>{
@@ -63,7 +63,7 @@ export class RolesController {
         description: "Traer todos los roles"
       })
       @ApiOkResponse({
-        type: BaseRolesResponse
+        type: BaseRolResponse
       })
     @Get()
     async findAll(): Promise<RolEntity[]> {
@@ -76,7 +76,7 @@ export class RolesController {
         description: "Traer roles por id"
       })
       @ApiOkResponse({
-        type: BaseRolesResponse
+        type: BaseRolResponse
       })
     @Get(':id')
     async getOne(@Param('id') id: number): Promise<RolEntity> {
@@ -94,7 +94,7 @@ export class RolesController {
       description: "Actualizar roles por id"
     })
     @ApiOkResponse({
-      type: BaseRolesResponse
+      type: BaseRolResponse
     })
     @Put(':id')
     async update (@Param('id') id: number, @Body() data: RolDto): Promise<any> {
@@ -107,7 +107,7 @@ export class RolesController {
       description: "Eliminar roles por id"
     })
     @ApiOkResponse({
-      type: BaseRolesResponse
+      type: BaseRolResponse
     })
     @Delete(':id')
     async delete(@Param('id') id: number): Promise<any> {

@@ -11,8 +11,8 @@ export class UserDTO {
   @ApiProperty()
   readonly password: string;
 
-  constructor(name: string, email: string, password: string) {
-    this.full_name = name;
+  constructor(full_name: string, email: string, password: string) {
+    this.full_name = full_name;
     this.email = email;
     this.password = password;
   }
