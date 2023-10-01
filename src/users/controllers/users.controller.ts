@@ -14,6 +14,7 @@ import {
     ApiUnauthorizedResponse
   } from "@nestjs/swagger";
 import { BaseUsuarioResponse } from '../parameters/user.response';
+import { ErrorBaseResponse } from 'src/common/exception/error.response';
   
   // Rutas y versiones del proyecto
   @ApiTags("users")
@@ -24,19 +25,19 @@ import { BaseUsuarioResponse } from '../parameters/user.response';
   // Errors responses
   @ApiUnauthorizedResponse({
     description: "Unauthorized",
-    // type: ErrorBaseResponse
+    type: ErrorBaseResponse
   })
   @ApiForbiddenResponse({
     description: "Forbidden",
-    // type: ErrorBaseResponse
+    type: ErrorBaseResponse
   })
   @ApiBadRequestResponse({
     description: "Bad Request",
-    // type: ErrorBaseResponse
+    type: ErrorBaseResponse
   })
   @ApiInternalServerErrorResponse({
     description: "Internal Server Error",
-    // type: ErrorBaseResponse
+    type: ErrorBaseResponse
   })
 
 @Controller('users')
