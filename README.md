@@ -14,15 +14,31 @@
 
 <h> Login... </h>
 
-[![signin.png](https://i.postimg.cc/Kc17gZNf/signin.png)](https://postimg.cc/9zjw6Hsw)
+[![inicio-sesion.png](https://i.postimg.cc/zXKzbMN7/inicio-sesion.png)](https://postimg.cc/xcjDB6cN)
 
-<h> Get users (For admin)... </h>
+<h> Get users - all or by Id (For admin)... </h>
 
-[![getusers.png](https://i.postimg.cc/FKJmLkYm/getusers.png)](https://postimg.cc/1gPLxt0Y)
+[![get-all-users.png](https://i.postimg.cc/ZnjLVjtM/get-all-users.png)](https://postimg.cc/0KMmNYNY)
 
-<h> Get roles (For admin)... </h>
+<h> Get roles - all or by Id(For admin)... </h>
 
-[![getusers.png](https://i.postimg.cc/FKJmLkYm/getusers.png)](https://postimg.cc/1gPLxt0Y)
+[![get-all-roles.png](https://i.postimg.cc/kXXsBrW3/get-all-roles.png)](https://postimg.cc/xqhM44st)
+
+<h> Update users - all or by Id (For admin)... </h>
+
+[![update-users.png](https://i.postimg.cc/W1c45V8x/update-users.png)](https://postimg.cc/2VTm5PPx)
+
+<h> Update roles - all or by Id(For admin)... </h>
+
+[![update-roles.png](https://i.postimg.cc/zBvDyGDH/update-roles.png)](https://postimg.cc/LYdF7R1m)
+
+<h> Delete users - by Id (For admin)... </h>
+
+[![usuario-eliminado.png](https://i.postimg.cc/Jh4HQm4M/usuario-eliminado.png)](https://postimg.cc/xXhd0wz4)
+
+<h> Delete roles - by Id(For admin)... </h>
+
+[![rol-eliminado.png](https://i.postimg.cc/C19ZYqCx/rol-eliminado.png)](https://postimg.cc/9RtXYzN6)
 
 <h1>Enviroment Variables</h1>
 
