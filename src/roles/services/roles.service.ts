@@ -31,8 +31,13 @@ export class RolesService {
         return this.userRepository.find(role);
     }
 
+    // metodo encargado de traer todos los roles por rol
+    async getOne(name: string): Promise<RolEntity[]> {
+        return this.rolRepository.find({ where: { name } });
+    }
+
     // metodo encargado de traer todos los roles por id
-    async getOne(id: number): Promise<RolEntity> {
+    async getOneId(id: number): Promise<RolEntity> {
         return this.rolRepository.findOne({ where: { id } });
     }
     

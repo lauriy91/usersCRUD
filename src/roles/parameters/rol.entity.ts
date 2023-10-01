@@ -11,9 +11,6 @@ export class RolEntity {
     name: string;
 
     @Column()
-    rol: string;
-
-    @Column()
     is_deleted?: boolean;
 
     @CreateDateColumn({ type: 'timestamptz' })
@@ -22,5 +19,3 @@ export class RolEntity {
     @UpdateDateColumn({ type: 'timestamptz' })
     updated_at: Date;
 }
-
-
