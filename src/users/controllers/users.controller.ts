@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { UsersService } from '../services/users.service';
-import { Body, Controller, Post, Put, Get, NotFoundException, Param } from '@nestjs/common';
+import { Body, Controller, Post, Put, Get, NotFoundException, Param, Delete } from '@nestjs/common';
 import { UserEntity } from '../parameters/user.entity';
 import { UserDTO } from '../parameters/user.dto';
 
@@ -15,7 +15,7 @@ import {
   } from "@nestjs/swagger";
 import { BaseUsuarioResponse } from '../parameters/user.response';
   
-  // Paths and version project
+  // Rutas y versiones del proyecto
   @ApiTags("users")
   @Controller({
     path: "users",
@@ -98,5 +98,23 @@ export class UsersController {
     @Put(':id')
     async update (@Param('id') id: number, @Body() data: UserDTO): Promise<any> {
       return this.usersService.update(id, data);
+    }
+
+    //Eliminar usuarios por id
+    @ApiOperation({
+      summary: "Eliminar usuarios por id",
+      description: "Eliminar usuarios por id"
+    })
+    @ApiOkResponse({
+      type: BaseUsuarioResponse
+    })
+    @Delete(':id')
+    async delete(@Param('id') id: number): Promise<any> {
+      //Condicional si no existe arroja error
+      const user = await this.usersService.getOne(id);
+      if (!user) {
+        throw new NotFoundException('User does not exist!');
+      }
+      return this.usersService.delete(id);
     }
 }
